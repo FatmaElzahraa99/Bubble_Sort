@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+void bubbleSort(int arr[]){
+		int n = sizeof(arr);
+		for(int i = 0 ; i < n ; i++)
+			for(int j = 0 ; j < n ; j++)
+				if(arr[i]>arr[j]) {
+					int x = arr[j];
+					arr[j] = arr[i];
+					arr[i]=x;
+				}
+		}
+void print(int arr[]){
+	for(int i = 0 ; i < sizeof(arr) ; i++)
+	 	cout<<arr[i]<<" ";
+	 cout<<endl;	
+	}	
+int main() 
+{
+	int arr[]={2,3,4,5,6,7,1};
+	bubbleSort(arr);
+	print(arr);
+	return 0;
+}
